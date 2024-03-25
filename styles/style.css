@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   outline: 0;
+  box-sizing: content-box;
 }
 
 :root {
@@ -102,20 +103,6 @@ header > div.logotipo > h1 {
   border-radius: 100%;
 }
 
-aside.class {
-  overflow-y: scroll;
-  position: absolute;
-  display: flex;
-  flex: 0;
-  bottom: 0;
-  height: 35vh;
-  width: 30vw;
-  padding: 10px;
-  margin-left: 20px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px var(--shadow);
-  background-color: var(--color1);
-}
 
 .themes-title {
   font-weight: lighter;
@@ -147,12 +134,27 @@ aside.class {
 
 .themes-list > li > svg {
   fill: var(--color1-dark);
-  height: 2.8em;
-  width: 2.8em;
+  height: 3.4em;
+  width: 3.4em;
   padding: 4px;
   margin-left: 10px;
-  margin-top: 4px;
+  margin-top: 1px;
   border-radius: 100%;
+  background-color: var(--color1);
+}
+
+aside.class {
+  overflow-y: scroll;
+  position: absolute;
+  display: flex;
+  flex: 0;
+  bottom: 0;
+  height: 35vh;
+  width: 30vw;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px var(--shadow);
   background-color: var(--color1);
 }
 
@@ -215,7 +217,7 @@ aside.articles {
 
 .article-img {
   display: flex;
-  width: 2em;
+  width: 2.6em;
   padding: 10px;
   margin-left: 10px;
   border-radius: 100%;
@@ -224,19 +226,27 @@ aside.articles {
 }
 
 .article-img > svg {
+  margin: auto;
   width: 2em;
   fill: var(--color1-dark);
 }
 
-.article-texts {
+.article-texts-group {
   flex-direction: row;
+}
+
+.article-title {
+  color: var(--text-color-dark);
+  font-size: 0.86em;
+  font-weight: lighter;
+  margin-top: 10px;
 }
 
 .article-tag {
   text-align: center;
   color: var(--text-color);
-  font-size: 0.6em;
-  height: 1em;
+  font-size: 0.7em;
+  height: 1.4em;
   width: 6em;
   padding: 2px;
   margin-top: 5px;
@@ -251,12 +261,6 @@ aside.articles {
   flex-direction: row;
 }
 
-.article-title {
-  color: var(--text-color-dark);
-  font-size: 13px;
-  font-weight: lighter;
-  margin-top: 10px;
-}
 
 .article-tag,
 .article-title {
